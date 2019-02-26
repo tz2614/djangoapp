@@ -1,0 +1,21 @@
+
+{% if latest_variant_list %}
+
+	<ul>
+		
+		{% for variant in latest_variant_list %}
+
+		<li><a 
+			href="/var_db/variant/{{variant.get_hgvs}}">{{variant.get_hgvs}}
+			</a>
+		</li>
+
+		{% endfor %}
+
+	</ul>
+
+{% else %}
+
+	<p>No variants available.</p>
+
+{% endif %}
